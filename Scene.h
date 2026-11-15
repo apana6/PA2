@@ -55,7 +55,7 @@ public:
     }
 
     // TODO 4: the scene behind slot index.
-    // Return nullptr if index is not a real slot.
+    //  nullptr if index is not a real slot.
     Scene<T>* getChoice(int index) const {
         if (index < 0 || index >= numChoices_) {
             return nullptr;
