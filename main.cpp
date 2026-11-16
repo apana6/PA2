@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    // ===================== PART 0: runs as-is =====================
+    // ==================== PART 0: runs as-is =====================
     // Opens the story file named in argv[1] and prints every line.
     // Run this first so you know your file is being found.
     // When you start PART 1, comment out this whole block.
