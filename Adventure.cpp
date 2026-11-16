@@ -66,7 +66,7 @@ bool Adventure::load(const std::string& fileName) {
     std::ifstream in(fileName);
 
     if (!in.is_open()) {
-        std::cout << "Error could not open this file" << fileName << std::endl;
+        std::cout << "Error: could not open file " << fileName << std::endl;
         return false;
     }
 
@@ -237,7 +237,7 @@ void Adventure::play() {
             Item item(moment->getItem());
 
             if (bag.search(item)) {
-                std::cout << "You already have " << moment->getItem() << std::endl;
+                std::cout << "You already have: " << moment->getItem() << std::endl;
             } else {
                 bag.addFront(new Item(moment->getItem()));
 
@@ -274,7 +274,7 @@ void Adventure::play() {
     }
 
     std::cout << "Final HP: " << hp << "  Final loot: " << loot << std::endl;
-    std::cout << "Inventory (" << bag.size() << " items)" << std::endl;
+    std::cout << "Inventory (" << bag.size() << " items):" << std::endl;
     bag.print();
 }
 
