@@ -25,7 +25,7 @@ public:
         if (numChoices_ > 0) {
             choices_ = new Scene<T>*[numChoices_];
             for (int i = 0; i < numChoices_; i++) {
-
+                choices_[i] = nullptr;
             }
         }
     }

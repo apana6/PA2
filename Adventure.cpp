@@ -66,7 +66,7 @@ bool Adventure::load(const std::string& fileName) {
     std::ifstream in(fileName);
 
     if (!in.is_open()) {
-        std::cout << "Error could not open this file" << std::endl;
+        std::cout << "Error could not open this file" << fileName << std::endl;
         return false;
     }
 
@@ -244,7 +244,7 @@ void Adventure::play() {
                 std::cout << "You picked up: " << moment->getItem() << std::endl;
             }
         }
-        std::cout << "HP: " << hp << " Loot: " << loot << std::endl;
+        std::cout << "HP: " << hp << "  Loot: " << loot << std::endl;
 
         if (hp <= 0) {
             std::cout << "Your HP hit 0. GAME OVER." << std::endl;
@@ -273,7 +273,7 @@ void Adventure::play() {
         current = current->getChoice(choice - 1);
     }
 
-    std::cout << "Final HP: " << hp << " Final loot: " << loot << std::endl;
+    std::cout << "Final HP: " << hp << "  Final loot: " << loot << std::endl;
     std::cout << "Inventory (" << bag.size() << " items)" << std::endl;
     bag.print();
 }
@@ -455,10 +455,10 @@ void Adventure::optimalRun() const {
     std::cout << "Optimal advisor" << std::endl;
 
     if (bestLootAmount == -1) {
-        std::cout << " Result - no path survives this story" << std::endl;
+        std::cout << "  Result: no path survives this story" << std::endl;
         return;
     }
-    std::cout << " Path: " << bestPath << std::endl;
-    std::cout << " Loot: " << bestLootAmount << std::endl;
-    std::cout << " Result: reached an ending" << std::endl;
+    std::cout << "  Path: " << bestPath << std::endl;
+    std::cout << "  Loot: " << bestLootAmount << std::endl;
+    std::cout << "  Result: reached an ending" << std::endl;
 }
