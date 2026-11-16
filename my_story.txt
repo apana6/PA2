@@ -1,6 +1,125 @@
 START_HP 10
-SCENE Replace this file with your own story.
+SCENE You arrive at McKinley for your first day of glee club activities.
 HP 0
 LOOT 0
 ITEM none
-CHOICES 0
+CHOICES 2
+
+LABEL Audition for a solo
+    SCENE You audition for the lead solo in front of the glee club.
+    HP -1
+    LOOT 4
+    ITEM Microphone
+    CHOICES 1
+
+    LABEL Perform in front of Sue
+        SCENE Sue is one of the judges. She hates your outfit and throws you out of the audition.
+        HP -3
+        LOOT 0
+        ITEM Tears
+        CHOICES 2
+
+        LABEL Take it like a champ
+            SCENE You walk out with your chin up and refuse to let Sue discourage you.
+            HP 1
+            LOOT 2
+            ITEM Dignity
+            CHOICES 1
+
+            LABEL Keep pursuing music
+                SCENE You continue practicing and earn a chance to perform at an open mic night.
+                HP 1
+                LOOT 3
+                ITEM Sheet Music
+                CHOICES 1
+
+                LABEL Perform at the open mic
+                    SCENE You perform confidently and receive a standing ovation from the audience.
+                    HP 2
+                    LOOT 6
+                    ITEM Trophy
+                    CHOICES 0
+
+        LABEL Confront Sue
+            SCENE You confront Sue about the unfair audition. She becomes angry and gives you another difficult challenge.
+            HP -7
+            LOOT 3
+            ITEM none
+            CHOICES 1
+
+            LABEL Attempt the challenge
+                SCENE You try to complete Sue's impossible challenge, but you are too exhausted to finish.
+                HP -2
+                LOOT 1
+                ITEM none
+                CHOICES 0
+
+LABEL Apply to be a teacher assistant
+    SCENE Will tells you that becoming a teacher assistant requires several interviews.
+    HP 0
+    LOOT 2
+    ITEM Clipboard
+    CHOICES 3
+
+    LABEL Interview with the choir director
+        SCENE The choir director asks whether you can help students learn their music.
+        HP -1
+        LOOT 1
+        ITEM Music Notes
+        CHOICES 1
+
+        LABEL Help during rehearsal
+            SCENE You help the singers practice their harmonies before rehearsal.
+            HP 1
+            LOOT 2
+            ITEM Tuning Fork
+            CHOICES 1
+
+            LABEL Lead the warmup
+                SCENE You lead the warmup exercises and impress everyone with your confidence.
+                HP 1
+                LOOT 8
+                ITEM Conductors Baton
+                CHOICES 0
+
+    LABEL Interview with the principal
+        SCENE The principal asks you to explain how you would handle a difficult student.
+        HP 0
+        LOOT 2
+        ITEM Principal Notes
+        CHOICES 1
+
+        LABEL Organize the music room
+            SCENE You organize the music room and discover that you are excellent at planning.
+            HP 1
+            LOOT 3
+            ITEM Organizer
+            CHOICES 1
+
+            LABEL Teach younger students
+                SCENE You teach younger students how to read music and become a trusted assistant.
+                HP 1
+                LOOT 6
+                ITEM Teaching Certificate
+                CHOICES 0
+
+    LABEL Interview with Sue
+        SCENE Sue interviews you and tries to intimidate you with difficult questions.
+        HP -2
+        LOOT 1
+        ITEM none
+        CHOICES 1
+
+        LABEL Stay calm
+            SCENE You stay calm and answer every question honestly.
+            HP 1
+            LOOT 2
+            ITEM Confidence
+            CHOICES 1
+
+            LABEL Accept the teacher assistant position
+                SCENE Will offers you the teacher assistant position and congratulates you on your hard work.
+                HP 2
+                LOOT 7
+                ITEM Staff Badge
+                CHOICES 0
